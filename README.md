@@ -2,17 +2,17 @@
 
 
 ## Author
-This repository is created by <ande@evilzone.org>  
+This repository is created by <ande@evilzone.org>
 
-Feel free to use it as you want  
+Feel free to use it as you want
 
 
 ## Introduction
 This is a class to dispatch global events in your application.  
-The event dispatcher accepts both custom functions and EventListener interface implemenations.  
+The event dispatcher accepts both custom functions and EventListener interface implemenations.
 
 ### EventListener interface
-The EventListener interface has one static function called 'run'.
+The EventListener interface has one static function called 'run'.  
 The EventListener implemented classes are expected to be in a sub-folder named 'Events'.
 
 
@@ -32,9 +32,9 @@ This is the entry point for your EventListener interface implemented events.
 
 ## Usage
 ### EventListener interface implemenation
-Create your EventListener implemented class.
+Create your EventListener implemented class.  
 This is expected to be in a sub-folder named 'Events'.
-The file name is also expected to be called the same as the class name + '.class.php'.
+The file name is also expected to be called the same as the class name + '.class.php'.  
 In this case the full path would be Events/newUserRegisteredEvent.class.php:
 ```PHP
 /**
