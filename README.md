@@ -26,14 +26,16 @@ The EventListener implemented classes are expected to be in a sub-folder named '
 
 ### EventListener
 The EventListener interface also has:
-* public static function run($args = NULL)
+* public static function run($args = NULL)  
 This is the entry point for your EventListener interface implemented events.
 
 
 ## Usage
 ### EventListener interface implemenation
 Create your EventListener implemented class.
-This is expected to be in a sub-folder named 'Events':
+This is expected to be in a sub-folder named 'Events'.
+The file name is also expected to be called the same as the class name + '.class.php'.
+In this case the full path would be Events/newUserRegisteredEvent.class.php:
 ```PHP
 /**
  * Fires after a new user has registered
@@ -61,14 +63,14 @@ EventDispatcher::dispatch('newUserRegistered', ['username' => 'myUsername']);
 ### Custom functions
 You can also add any method format that can be used in call_user_func():
 ```PHP
-function newUserRegisteredEvent {
+function newUserRegisteredFunc {
 	echo('New user registered: ' . $args['username'] . '<hr>');
 }
 
-EventDispatcher::registerEvent('newUserRegistered', 'newUserRegisteredEvent');
+EventDispatcher::registerEvent('newUserRegistered', 'newUserRegisteredFunc');
 EventDispatcher::dispatch('newUserRegistered', ['username' => 'myUsername']);
 ```
 
 
 ## Future plans
-- This is good for now. But there are plenty of more complex implementations of the event dispatcher pattern floating around the web, so who knows. 
+* This is good for now. But there are plenty of more complex implementations of the event dispatcher pattern floating around the web, so who knows.
