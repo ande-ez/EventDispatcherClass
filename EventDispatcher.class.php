@@ -15,6 +15,7 @@ class EventDispatcher {
 	static private $eventsAndListeners = [];
 
 
+	// ---------------------------------------------------------------------------
 	/**
 	 * Dispatch an event by name and optional arguments
 	 *
@@ -31,6 +32,7 @@ class EventDispatcher {
 	}
 
 
+	// ---------------------------------------------------------------------------
 	/**
 	 * Function to actually call the event listener function
 	 *
@@ -62,6 +64,7 @@ class EventDispatcher {
 	}
 
 
+	// ---------------------------------------------------------------------------
 	/**
 	 * Registers / appends an event by name and callable
 	 *
